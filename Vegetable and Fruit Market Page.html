@@ -1,0 +1,105 @@
+
+<html>
+<head>
+    
+    <title>Vegetable and Fruit Market Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: peachpuff;
+        }
+        h1 {
+            color: blue;
+        }
+        .item {
+            background-color: yellow;
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            background-color:pink;
+            display: inline-block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Vegetable and Fruit Market Page!</h1>
+    <p>Click the button to add an item to the cart.</p>
+
+    <div class="item">
+        <p>🍅 Tomato - ₹50 per kg</p>
+        <button onclick="addToCart('Tomato')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p>🫑 Capsicum - ₹30 per kg</p>
+        <button onclick="addToCart('Capsicum')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p>🍆Brinjal - ₹50 per kg</p>
+        <button onclick="addToCart('Brinjal')">Add to Cart</button>
+    </div>
+
+<div class="item">
+        <p>🌽Corn - ₹15</p>
+        <button onclick="addToCart('Corn')">Add to Cart</button>
+    </div>
+
+<div class="item">
+        <p>🍇Grapes - ₹75</p>
+        <button onclick="addToCart('Grapes')">Add to Cart</button>
+    </div>
+
+<div class="item">
+        <p>🍓Strawberry- ₹150 per box</p>
+        <button onclick="addToCart('Strawberry')">Add to Cart</button>
+    </div>
+
+<div class="item">
+        <p>🍒Cherries- ₹150</p>
+        <button onclick="addToCart('Cherries')">Add to Cart</button>
+    </div>
+
+<div class="item">
+        <p>🍏Green Apple- ₹100</p>
+        <button onclick="addToCart('Green Apple')">Add to Cart</button>
+    </div>
+
+<div class="item">
+        <p>🍠Sweet Potato- ₹50</p>
+        <button onclick="addToCart('Sweet Potato')">Add to Cart</button>
+    </div>
+
+<div class="item">
+        <p>🍉Watermelon- ₹30</p>
+        <button onclick="addToCart('Show Piece')">Add to Cart</button>
+    </div>
+
+    <div class="cart">
+        <h3>Shopping Cart</h3>
+        <p id="cartList">Cart is empty</p>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            let cart = document.getElementById("cartList");
+            if (cart.innerHTML === "Cart is empty") {
+                cart.innerHTML = item;
+            } else {
+                cart.innerHTML += ", " + item;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
